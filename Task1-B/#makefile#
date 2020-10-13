@@ -1,0 +1,13 @@
+target:all out clean
+all:bitmask.o mystr.o myutils.o
+	gcc -Iinclude bitmask.o mystr.o myutils.o test.o -o all.out
+bitmask.o:
+	gcc -c src/bitmask.c
+mystr.o:
+	gcc -c src/mystr.c
+myutils.o:
+	gcc -c src/myutils.c
+clean: 
+	rm -rf *.o *.out
+out:
+
